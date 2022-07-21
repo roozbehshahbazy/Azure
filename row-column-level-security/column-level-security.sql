@@ -20,7 +20,7 @@ INSERT INTO sales2.Membership VALUES   ('San','333333333' ,'Dp', '888.123.4567',
  CREATE USER TestUser WITHOUT LOGIN; 
  
  -- Allow TestUser to access all columns except for the SSN column, which has the sensitive data
- GRANT SELECT ON Membership(FirstName, LastName, Phone, Email) TO TestUser;
+ GRANT SELECT ON sales2.Membership(FirstName, LastName, Phone, Email) TO TestUser;
  
 -- impersonate for testing:
 EXECUTE AS USER = 'TestUser';   
